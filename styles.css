@@ -68,19 +68,18 @@ h1 {
     display:grid;
     grid-template-rows: repeat(3, 1fr);
     background-color: #f9fafb;
+    height:100vh;
 }
 
 #signup-heading {
     align-self: flex-end;
     padding:40px;
+    margin-top:119px;
 }
 
 #form-section {
-    /* position:relative; */
     background-color: white;
     box-shadow: 0 5px 6px rgba(0,0,0,0.2);
-    top:6.5%;
-    margin-top:13.5px;
     height:300px;
     display:flex;
     flex-direction: column;
