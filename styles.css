@@ -1,9 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    height:100vh;
+}
+
+#banner-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    color:white;
 }
 
 img {
-    max-width: 100%;
+    height: 100%;
+}
+
+#logo-container {
+    position:absolute;
+    background-color: rgba(0,0,0,0.5);
+    z-index:1;
+    width:100%;
+    height:200px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    top:15%;
+}
+
+svg {
+    height:150px;
+    fill: white;
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-wrap:wrap;
+    width:200px;
+}
+
+#credits {
+    position:absolute;
+    right:-120px;
+    bottom:130px;
+    font-style:italic;
+    align-self:flex-start;
+    transform: rotate(-90deg);
+}
+
+#credits a {
+    color:white;
+    font-weight:bold;
+}
+
+#main-container {
+    display:grid;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #f9fafb;
+}
+
+#signup-heading {
+    align-self: flex-end;
+    padding:40px;
+}
+
+#form-section {
+    /* position:relative; */
+    background-color: white;
+    box-shadow: 0 5px 6px rgba(0,0,0,0.2);
+    top:6.5%;
+    margin-top:13.5px;
+    height:300px;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    padding:30px 40px;
+}
+
+#form-inputs-container {
+    display:grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap:20px;
+}
+
+.form-input {
+    display:flex;
+    flex-direction: column;
+}
+
+input {
+    border-radius: 5px;
+    border: solid 1px #e7e9ec;
+    height:30px;
+    width:260px;
+    transition:0.1s;
+    padding:0 10px;
+}
+
+input:focus {
+    outline:none;
+    border: 1.5px solid #2d5adb;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+input:invalid {
+    /* outline:#be2c2c; */
+    border: 1.5px solid #be2c2c;
+}
+
+#cta-section {
+    display:flex;
+    flex-direction: column;
+    padding:30px 40px;
+    gap:20px;
+}
+
+#cta-section button {
+    background-color: #cca97d;
+    color:white;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 3px 5px 10px rgba(0,0,0,0.2);
+    width:200px;
+    padding:10px 20px;
+    font-size:1.2rem;
+    border: none;
+    cursor: pointer;
+    transition:0.1s;
+}
+
+#cta-section button:active {
+    transform: scale(0.9);
+    background-color: #9d815f;
+}
+
+#cta-section span {
+    font-weight: bold;
+}
+
+#cta-section a {
+    color: #cca97d;
 }
